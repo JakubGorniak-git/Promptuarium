@@ -1,5 +1,6 @@
 const form = document.getElementById('promptForm');
 const responseDiv = document.getElementById('response');
+const evaluationDiv = document.getElementById('evaluation');
 
 async function sendPrompt(prompt) {
     const response = await fetch('/api/generate', {
@@ -25,4 +26,9 @@ form.addEventListener('submit', async function(event) {
     // Wyświetl w responseDiv
     responseDiv.innerHTML = result.message; // lub jak będzie nazywać się pole w odpowiedzi
     responseDiv.classList.add('show');
+
+    // Wyświetl w evaluationDiv
+    const evaluationDiv = document.getElementById('evaluation');
+    evaluationDiv.innerHTML = result.evaluation; // lub jak będzie nazywać się pole w odpowiedzi
+    evaluationDiv.classList.add('show');
 });

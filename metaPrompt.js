@@ -4,7 +4,8 @@ const metaPrompts = {
 Jesteś ekspertem w tworzeniu promptów dla AI. Przekształć poniższy prosty prompt w skuteczny, profesjonalny prompt zgodny z najlepszymi praktykami prompt engineering.
 
 Dodaj:
-- Jasną rolę dla AI
+- Jasną rolę dla AI - Ale nie bardzo długą i rozbudowaną - ma być krótka.
+- Konkretne zadanie do wykonania
 - Szczegółowe instrukcje  
 - Kontekst i przykłady jeśli potrzebne
 - Format odpowiedzi
