@@ -14,7 +14,6 @@ async function sendPrompt(prompt) {
     return data;
 }
 
-
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
     const promptText = document.getElementById('prompt').value;
@@ -23,12 +22,10 @@ form.addEventListener('submit', async function(event) {
     const result = await sendPrompt(promptText);
     console.log("Odpowiedź:", result);
     
-    // Wyświetl w responseDiv
-    responseDiv.innerHTML = result.message; // lub jak będzie nazywać się pole w odpowiedzi
+    responseDiv.innerHTML = result.message; 
     responseDiv.classList.add('show');
 
-    // Wyświetl w evaluationDiv
     const evaluationDiv = document.getElementById('evaluation');
-    evaluationDiv.innerHTML = result.evaluation; // lub jak będzie nazywać się pole w odpowiedzi
+    evaluationDiv.innerHTML = result.evaluation;
     evaluationDiv.classList.add('show');
 });
